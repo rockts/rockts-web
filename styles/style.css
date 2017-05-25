@@ -1,4 +1,28 @@
-h1 {
-  color: teal;
-  font-size: 66px;
+body {
+  background-color: black;
+}
+
+.container {
+  padding: 50px 30px;
+  position: relative;
+}
+
+.box {
+  width: 260px;
+  height: 260px;
+  background-color: #21ba45;
+  position: absolute;
+  left: 30px;
+
+
+  transition-property: border-radius, background-color, left;
+  transition-duration: .6s, 2sleft, 3s;
+  transition-delay: 1s;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+.box:hover {
+  border-radius: 50%;
+  background-color: #fbbd08;
+  left: 300px;
 }
