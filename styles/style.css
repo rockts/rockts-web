@@ -9,22 +9,23 @@ body {
 
 .image {
   width: 260px;
-  transition: transform 1s;
-  /*transform: perspective(600px) rotateX(45deg);*/
-  transform: rotateX(45deg);
+  animation-name: animation-demo;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(1, 0, 0, 1);
 }
 
-.images {
-  height: 260px;
-  width: 788px;
-  border: 1px solid #555;
-  transition: all 1s;
-  perspective: 600px;
-}
-.image:hover {
-  /*transform: perspective(100px) rotateZ(45deg);*/
-  /*transform: rotate(15deg);*/
-  /*transform: translateX(50px);*/
-  /*transform: translateY(50px);*/
-  /*transform-origin: right bottom;*/
+@keyframes animation-demo {
+  0% {
+    transform: translateY(-100px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100px);
+
+  }
+
 }
